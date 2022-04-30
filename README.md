@@ -9,9 +9,9 @@ I follow a typescript tutorial of vivasoftltd.com and create basic setup for typ
 ## Some useful command that you might be need to run this code
 
 - Requirements :
-    *OS: linux or macos
-    *terminal
-    *installed [nodejs](https://nodejs.org/en/)
+  - OS: linux or macos
+  - terminal
+  - installed [nodejs](https://nodejs.org/en/)
 
 - Install typescript
   - Create a folder anywhere in you pc name practice. Then
