@@ -38,6 +38,9 @@ compile all file at once
 ```npx tsc```
 
 Then you found all compiled js file is dist folder you can set any name for the folder. You can check the output with following command from the terminal:
-```node dist/class.js```
-```node dist/functions.js```
-```node dist/basic-types.js```
+
+- ```node dist/class.js```
+- ```node dist/functions.js```
+- ```node dist/basic-types.js```
+
+Tips: Alternatively you clone this repository and install node and typescript and you ready to go. 
