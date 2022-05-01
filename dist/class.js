@@ -50,4 +50,123 @@ class Ball {
         console.log('ping!');
     }
 }
+// end interface
+// example of member visibility
+// public
+class GreeterPublic {
+    greet() {
+        console.log('hi public method!');
+    }
+}
+const gt = new GreeterPublic();
+gt.greet();
+// public end
+// protected
+class GreeterProtected {
+    greet() {
+        console.log('Hello, ' + this.getName()); // getName is protected function only access by itself or subclass
+    }
+    getName() {
+        return 'Typescript';
+    }
+}
+class SpecialGreeter extends GreeterProtected {
+    howdy() {
+        // OK to access protected member here
+        console.log('Howdy, ' + this.getName()); // access by subclass
+    }
+}
+const gp = new SpecialGreeter();
+gp.greet(); // OK cause it public function
+//gp.getName(); // Property 'getName' is protected and only accessible within class 'GreeterProtected' and its subclasses.
+// private 
+class Base {
+    constructor() {
+        this.x = 0;
+    }
+    increment() {
+        this.x++;
+        console.log(this.x);
+    }
+    decrement() {
+        this.x--;
+        console.log(this.x);
+    }
+}
+const b = new Base(); // Can't access from outside the class
+//console.log(b.x); // Property 'x' is private and only accessible within class 'Base'.
+// but you can access x from public method increment or decrement
+b.increment(); // but you can change it from function method
+class Derived extends Base {
+    showX() {
+        // Can't access in subclasses
+        this.increment(); // this is okay you can update private value from public method or protected method by subclass
+        this.decrement(); // this is also possible
+        //console.log(this.x); // Property 'x' is private and only accessible within class 'Base'
+    }
+}
+// Readonly modifier
+class Octopus {
+    constructor(theName) {
+        this.numberOfLegs = 8;
+        this.name = theName;
+    }
+}
+// company
+class Company {
+    constructor(companyName, companyAddress) {
+        this.name = companyName;
+        this.address = companyAddress;
+    }
+}
+let company = new Company('Viva Soft Ltd', 'Mirpur Dohs');
+console.log(company.name); // ok
+console.log(company.address); // ok
+//company.name = 'xyz company'; // not okay
+let dad = new Octopus('Man with the 8 strong legs'); // readonly property access only in constructor
+//dad.name = 'Man with the 3-piece suit'; // Cannot assign to 'name' because it is a read-only property.
+// accessor
+// example of class without getter/setter
+class Employee {
+    constructor() {
+        this.fullName = '';
+    }
+}
+let employee = new Employee();
+employee.fullName = 'Bob Smith';
+if (employee.fullName) {
+    console.log(employee.fullName);
+}
+// without getter setter property need to be public
+// now we can same example with getter and setter
+const fullNameMaxLength = 10;
+class EmployeeAccessor {
+    constructor() {
+        this._fullName = "";
+    }
+    get fullName() {
+        return this._fullName;
+    }
+    set fullName(newName) {
+        if (newName && newName.length > fullNameMaxLength) {
+            throw new Error("fullName has a max length of " + fullNameMaxLength);
+        }
+        this._fullName = newName;
+    }
+}
+// here we can update private property of a class by getter and setter class
+let employeeAc = new EmployeeAccessor();
+employeeAc.fullName = "Bob Smith";
+if (employeeAc.fullName) {
+    console.log(employeeAc.fullName);
+}
+// static member example
+class MyClass {
+    static printX() {
+        console.log(MyClass.x);
+    }
+}
+MyClass.x = 'Static property';
+console.log(MyClass.x); // we dont need to create an object on MyClass. just access the property
+MyClass.printX(); // just access the method
 //# sourceMappingURL=class.js.map
