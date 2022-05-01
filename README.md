@@ -4,6 +4,7 @@ I follow a typescript tutorial of vivasoftltd.com and create basic setup for typ
 
 ## Vivasoftltd bootcamp url
 
+Please use browser translator to translate in english if you face problem to read or understood anything.
 - [bootcamp url](https://www.vivasoftltd.com/typescript-bootcamp)
 
 ## Some useful command that you might be need to run this code
