@@ -36,7 +36,8 @@ interface Musician extends IPerson {
 interface Vehicle {
     name: string,
     type: string,
-    wheel: number
+    wheel: number,
+    helper: () => void
 }
 
 interface Driver extends IPerson, Vehicle {
@@ -45,7 +46,10 @@ interface Driver extends IPerson, Vehicle {
 }
 
 const driver = <Driver>{};
-
+driver.helper = () => {
+    console.log(driver.type);
+};
+console.dir(driver);
 driver.firstName = 'David';
 driver.experience = 10;
 driver.lastName = 'Hamid';

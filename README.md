@@ -5,6 +5,7 @@ I follow a typescript tutorial of vivasoftltd.com and create basic setup for typ
 ## Vivasoftltd bootcamp url
 
 Please use browser translator to translate in english if you face problem to read or understood anything.
+
 - [bootcamp url](https://www.vivasoftltd.com/typescript-bootcamp)
 
 ## Some useful command that you might be need to run this code
@@ -12,7 +13,7 @@ Please use browser translator to translate in english if you face problem to rea
 - Requirements :
   - OS: linux or macos
   - terminal
-  - installed [nodejs](https://nodejs.org/en/)
+  - installed [nodejs](https://nodejs.org/en/) 16.x.x
 
 - Install typescript
   - Create a folder anywhere in you pc name practice. Then
@@ -43,8 +44,9 @@ compilation mode in watch mode
 
 Then you found all compiled js file is dist folder you can set any name for the folder. You can check the output with following command from the terminal:
 
-- ```node dist/class.js```
-- ```node dist/functions.js```
-- ```node dist/basic-types.js```
+- ```node dist/basic/class.js```
+- ```node dist/basic/functions.js```
+- ```node dist/basic/basic-types.js```
+- ```node dist/advanced/interface.js```
 
 Tips: Alternatively you clone this repository and install node and typescript and you ready to go.
