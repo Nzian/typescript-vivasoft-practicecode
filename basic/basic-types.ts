@@ -18,6 +18,8 @@ console.log(sentence);
 
 // array
 let list: number[] = [1,2,4];
+let people: object[] = [{id:1, name:'robin', designation: 'Hr manger'}];
+let employees: Array<object> = [{id:1, name:'robin', designation: 'Hr manger'}];
 let genericList: Array<number> = [1,2,32, 3,32];
 
 console.dir(genericList);

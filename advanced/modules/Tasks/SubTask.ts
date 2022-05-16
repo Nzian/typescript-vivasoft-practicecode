@@ -1,13 +1,17 @@
 //FileName : SubTask.ts
-export class SubTask{  
-    constructor(private subtasks?: [{id: number, taskId: number, name: string}]){  
+export class SubTask{
+    
+    private subtasks: Array<object>;
+    
+    constructor(subtasks : [{id: number, taskId: number, name: string}]){
+        this.subtasks = subtasks;
     }
     
-    public addSubtask(subtask: {id:number, taskId: number, name: string}): void {
+    public addSubTask(subtask: {id:number, taskId: number, name: string}): void {
         this.subtasks.push(subtask);
     }
 
-    public getSubtasks(): any {
+    public getSubTasks(): any {
         return this.subtasks;
     }
     
